@@ -1,0 +1,6 @@
+parameters:
+    locale: '%env(resolve:DEFAULT_LOCALE)%'
+
+services:
+    App\Twig\AppExtension:
+        arguments: ['%translator.default_path%/messages.%locale%.yaml']
